@@ -1,0 +1,40 @@
+{
+  "failure_states": [
+    {
+      "id": "fail_insufficient_funds",
+      "trigger": "user attempts to send an amount greater than available_balance",
+      "http": 422,
+      "code": "INSUFFICIENT_FUNDS",
+      "recommended_message": "We couldn't send £{amount} to {payee}. Your available balance is £{available}. Try a smaller amount, or move money in first.",
+      "recommended_action_primary": "Adjust amount",
+      "recommended_action_secondary": "Cancel"
+    },
+    {
+      "id": "fail_payee_details_invalid",
+      "trigger": "sort_code or account_number does not validate",
+      "http": 400,
+      "code": "PAYEE_INVALID",
+      "recommended_message": "The sort code or account number for {payee} looks wrong. Check the details and try again.",
+      "recommended_action_primary": "Check details",
+      "recommended_action_secondary": "Cancel"
+    },
+    {
+      "id": "fail_network_timeout",
+      "trigger": "network request exceeds 8 seconds",
+      "http": 504,
+      "code": "NETWORK_TIMEOUT",
+      "recommended_message": "We couldn't reach the bank. Your payment has not been sent. Check your connection and try again in a moment.",
+      "recommended_action_primary": "Try again",
+      "recommended_action_secondary": "Cancel"
+    },
+    {
+      "id": "fail_session_expiring",
+      "trigger": "no user activity for 9 minutes with a 10-minute session limit",
+      "http": null,
+      "code": "SESSION_WARNING",
+      "recommended_message": "You'll be signed out in one minute. Anything you've typed is safe. Do you want to stay signed in?",
+      "recommended_action_primary": "Stay signed in",
+      "recommended_action_secondary": "Sign out"
+    }
+  ]
+}

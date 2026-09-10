@@ -1,0 +1,38 @@
+{
+  "customer": {
+    "id": "cus_10422",
+    "name": "Sam Okafor",
+    "preferred_name": "Sam",
+    "email": "sam.okafor@example.co.uk",
+    "phone": "+44 7700 900123",
+    "locale": "en-GB",
+    "reduced_motion_preference": true,
+    "assistive_tech": "screen-reader occasional"
+  },
+  "accounts": [
+    {
+      "id": "acc_current_001",
+      "type": "current",
+      "nickname": "Everyday",
+      "sort_code": "20-45-91",
+      "account_number_last4": "8842",
+      "currency": "GBP",
+      "balance": 3186.42,
+      "available_balance": 3086.42,
+      "pending_total": 100.00,
+      "overdraft_limit": 500.00,
+      "opened": "2021-03-14"
+    },
+    {
+      "id": "acc_savings_001",
+      "type": "savings",
+      "nickname": "Rainy day",
+      "sort_code": "20-45-91",
+      "account_number_last4": "0117",
+      "currency": "GBP",
+      "balance": 8420.00,
+      "interest_rate_apr": 3.75,
+      "opened": "2023-08-02"
+    }
+  ]
+}

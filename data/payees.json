@@ -1,0 +1,10 @@
+{
+  "payees": [
+    {"id": "pay_01", "name": "Sarah Adeyemi",   "relationship": "friend",   "sort_code": "40-12-06", "account_number_last4": "1122", "reference_default": "Dinner"},
+    {"id": "pay_02", "name": "James Randall",   "relationship": "family",   "sort_code": "60-83-71", "account_number_last4": "9040", "reference_default": "Rent"},
+    {"id": "pay_03", "name": "Kingsley Owusu",  "relationship": "flatmate", "sort_code": "20-45-91", "account_number_last4": "3311", "reference_default": "Bills"},
+    {"id": "pay_04", "name": "Aisha Malik",     "relationship": "friend",   "sort_code": "30-90-89", "account_number_last4": "7788", "reference_default": ""},
+    {"id": "pay_05", "name": "Landlord Ltd",    "relationship": "landlord", "sort_code": "23-05-80", "account_number_last4": "0044", "reference_default": "Sept rent"},
+    {"id": "pay_06", "name": "HMRC",            "relationship": "official", "sort_code": "08-32-10", "account_number_last4": "1200", "reference_default": "Self assessment"}
+  ]
+}

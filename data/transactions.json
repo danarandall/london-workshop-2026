@@ -1,0 +1,26 @@
+{
+  "account_id": "acc_current_001",
+  "currency": "GBP",
+  "transactions": [
+    {"id": "txn_0020", "date": "2026-09-09", "merchant": "Pret A Manger",        "category": "food",       "amount": -6.85,   "status": "posted",   "method": "card"},
+    {"id": "txn_0019", "date": "2026-09-09", "merchant": "TfL Travel",           "category": "transport",  "amount": -8.90,   "status": "posted",   "method": "card"},
+    {"id": "txn_0018", "date": "2026-09-08", "merchant": "Salary — Bright Ltd",  "category": "income",     "amount":  2410.00,"status": "posted",   "method": "bank_transfer"},
+    {"id": "txn_0017", "date": "2026-09-08", "merchant": "Thames Water",         "category": "bills",      "amount": -38.20,  "status": "posted",   "method": "direct_debit"},
+    {"id": "txn_0016", "date": "2026-09-07", "merchant": "Waitrose",             "category": "groceries",  "amount": -52.14,  "status": "posted",   "method": "card"},
+    {"id": "txn_0015", "date": "2026-09-06", "merchant": "Odeon Cinemas",        "category": "leisure",    "amount": -14.50,  "status": "posted",   "method": "card"},
+    {"id": "txn_0014", "date": "2026-09-05", "merchant": "Refund — ASOS",        "category": "refund",     "amount":  27.99,  "status": "posted",   "method": "card"},
+    {"id": "txn_0013", "date": "2026-09-05", "merchant": "Uber",                 "category": "transport",  "amount": -11.40,  "status": "pending",  "method": "card"},
+    {"id": "txn_0012", "date": "2026-09-04", "merchant": "British Gas",          "category": "bills",      "amount": -74.00,  "status": "posted",   "method": "direct_debit"},
+    {"id": "txn_0011", "date": "2026-09-03", "merchant": "Sainsbury's",          "category": "groceries",  "amount": -41.63,  "status": "posted",   "method": "card"},
+    {"id": "txn_0010", "date": "2026-09-02", "merchant": "Netflix",              "category": "subscriptions","amount": -10.99,"status": "posted",   "method": "card"},
+    {"id": "txn_0009", "date": "2026-09-02", "merchant": "Boots Pharmacy",       "category": "health",     "amount": -12.45,  "status": "posted",   "method": "card"},
+    {"id": "txn_0008", "date": "2026-09-01", "merchant": "Transfer to Rainy day","category": "transfer",   "amount": -250.00, "status": "posted",   "method": "internal_transfer"},
+    {"id": "txn_0007", "date": "2026-08-31", "merchant": "Pret A Manger",        "category": "food",       "amount": -5.60,   "status": "posted",   "method": "card"},
+    {"id": "txn_0006", "date": "2026-08-30", "merchant": "Amazon",               "category": "shopping",   "amount": -63.20,  "status": "posted",   "method": "card"},
+    {"id": "txn_0005", "date": "2026-08-30", "merchant": "Payment to J. Adeyemi","category": "p2p",        "amount": -40.00,  "status": "posted",   "method": "faster_payment"},
+    {"id": "txn_0004", "date": "2026-08-29", "merchant": "Vodafone",             "category": "bills",      "amount": -28.00,  "status": "posted",   "method": "direct_debit"},
+    {"id": "txn_0003", "date": "2026-08-28", "merchant": "Tesco Express",        "category": "groceries",  "amount": -17.85,  "status": "posted",   "method": "card"},
+    {"id": "txn_0002", "date": "2026-08-27", "merchant": "Spotify",              "category": "subscriptions","amount": -11.99,"status": "posted",   "method": "card"},
+    {"id": "txn_0001", "date": "2026-08-26", "merchant": "Declined — Ryanair",   "category": "travel",     "amount": -89.00,  "status": "declined", "method": "card", "decline_reason": "card_expired"}
+  ]
+}
