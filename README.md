@@ -2,7 +2,7 @@
 
 Assets for the workshop **AI for Accessibility and Cutting-Edge UX**, Tuesday 15 September 2026, Cavendish Venues, London. Facilitated by Dana Randall (Level Access) and David Franklin.
 
-Free to use under CC BY 4.0. Nothing here is a real person, real account, or real money.
+Nothing here is a real person, real account, or real money.
 
 ## In this repo
 
@@ -31,6 +31,3 @@ Round 2 uses the rules file from **[danarandall/ai-a11y-toolkit](https://github.
 
 The gap between the Round 1 QA score and the Round 2 QA score is what a rules file plus a plain-language brief buys you, without writing a line of code.
 
-## Licence
-
-CC BY 4.0.

@@ -6,7 +6,7 @@
 
 - github.com/danarandall/ai-a11y-toolkit
 - danarandall.com/ai-a11y-toolkit
-- Licence: CC BY 4.0. No account. No signup.
+- No account. No signup.
 
 ## Files (paste into project knowledge)
 
