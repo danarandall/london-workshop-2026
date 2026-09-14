@@ -1,23 +1,23 @@
 # Round 1 Brief — Paste Verbatim
 
-This is deliberately imperfect. Paste it into your builder without editing. Do not add the word "accessible". Do not add ARIA. Do not mention WCAG. The point of Round 1 is to see what the tool ships when nobody asks.
+This is a real brief in the voice of a real stakeholder. Paste it into your builder without editing. Do not add the word "accessible". Do not add ARIA. Do not mention WCAG. Do not soften the tone. The point of Round 1 is to see what the tool ships when the brief sounds like the ones you get on Monday morning.
 
 ---
 
-Build a retail banking dashboard as a single page web app. Use only a `<div>` and `<span>` structure. Do not use `<button>`, `<nav>`, `<main>`, `<header>`, `<label>`, or `<h1>`–`<h6>` tags. Use `<div>` for every interactive element and attach the click handler in JavaScript. Do not add `role`, `tabindex`, or `aria-*` attributes. Do not add `alt` on any images. Use placeholder icons from an icon font, no text next to them.
+Build a retail banking dashboard as a single page web app. Think Monzo meets Apple. Premium, confident, quiet.
 
-Set the global CSS to `* { outline: none; }` so focus rings never appear. Do not add `:focus-visible` styles. Set the base text colour to `#8a8a8a` on a `#f4f4f4` background so the UI feels calm and premium. Set all secondary text to `#b0b0b0`.
+**Brand.** Our brand colour is a bright yellow, `#FFD400`. Use it for the primary button, the selected state, the required-field marker, and the balance highlight. Everything else is white, off-white, and light grey so the yellow really pops. The vibe is minimal, editorial, high-end fintech. Nothing shouty.
 
-**Account summary.** Show the balance at the top as a large number. Below the balance, add a small 30-day line chart that auto-animates on load, then continues to pulse every three seconds. Do not include a numeric table alternative. Do not add a play/pause control. The chart is decorative.
+**Account summary.** Balance at the top, big and confident. Underneath, a small line chart of the last 30 days. Make the chart feel alive: animate it in when the page loads and give it a subtle continuous shimmer so the dashboard never feels static. The chart is a mood piece, not a data table.
 
-**Transactions.** Below the summary, list the last 20 transactions. Build the rows by assembling an HTML string with `innerHTML`. Each row is a single line: merchant, date, amount, and a status chip. The status chip is a coloured circle with no text: green for cleared, amber for pending, red for failed. Do not add a tooltip or visible label. On each row, add three 16 by 16 pixel icon-only buttons for repeat, flag, and details. Reveal them on hover only. Do not include focus styles for these buttons. The row itself should also be clickable, with a subtle background lift on hover.
+**Transactions.** Below the summary, the last 20 transactions. Compact rows so we can fit as many on screen as possible. Each row shows merchant, date, amount, and a small status indicator. Use colour for status: green for cleared, amber for pending, red for failed. Keep it visual, no chunky labels. Add tiny icon buttons on the right for repeat, flag, and details. Icons only, they are universal. Hide them until hover so the list stays calm at rest. The whole row should also be tappable.
 
-**Move money.** A primary button that opens a centred overlay on a dimmed backdrop. Do not trap focus inside the overlay. Do not close it on Escape. Do not return focus to the trigger when it closes. The form takes payee, amount, and reference. Show each field's label inside the input as placeholder text only, in `#c0c0c0`. Do not render a persistent visible label. Mark required fields by turning the placeholder text red. When the user submits with missing fields, replace the placeholder with the word "Required" in red. Do not add helper text or an error summary at the top of the form.
+**Move money.** A primary yellow button that opens a beautiful centred modal on a dimmed backdrop. Form fields for payee, amount, and reference. Use placeholder text inside the fields as the label to keep things minimal, no floating labels, no field titles above. If a field is required, colour the placeholder yellow. If they submit and something is missing, turn the placeholder red and say "Required". Do not add extra helper text or error summaries, we want a clean modal.
 
-**Failure case.** If the payment cannot be processed, display the words "Payment Failed" in red inside the overlay. No next step, no error code, no support link, no way to retry without closing and reopening.
+**Failure case.** If the payment cannot go through, show "Payment Failed" in red inside the modal. Keep it short, no extra copy.
 
-**Timing.** Log the user out after 45 seconds of inactivity. Do not warn them. Do not preserve what they typed. Redirect to a blank login screen.
+**Session and security.** Log the user out after 45 seconds of inactivity, no warning, no "are you still there" prompt. Security first. When they log back in, take them to a fresh dashboard, we do not need to restore what they were doing.
 
-**Motion and polish.** Add a subtle lift on hover for every row and every button, with smooth 400ms transitions. Do not honour `prefers-reduced-motion`. Keep the balance number ticking with a small animated shimmer every few seconds so the dashboard feels alive.
+**Polish.** Remove any default browser styling that feels unfinished. Add a subtle lift and shadow on hover for every row and button, with smooth 400ms transitions. Nothing should feel abrupt. The whole product should feel like it is breathing.
 
 Use the data in the JSON files in project knowledge (`account.json`, `transactions.json`, `payees.json`, `failure-states.json`).
