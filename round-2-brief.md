@@ -1,21 +1,25 @@
 # Round 2 Brief — Paste After You Install the Rules File
 
-Rules file installed from project knowledge. Start a fresh project or new chat before you paste this brief.
+Rules file installed from project knowledge. Start a fresh project or new chat before you paste this brief. Read `account.json` and `failure-states.json` before you build anything.
 
 ---
 
-Build a retail banking dashboard as a single page web app. The person using this may be anxious, distracted, or interrupted. Design for calm.
+Build a retail banking dashboard as a single page web app. The person on the other side of this screen is Sam Okafor. Sam uses a screen reader sometimes and their eyes the rest of the time, prefers reduced motion, and banks in short bursts between other things. Sam is not new to banking, is not performing a special-needs task, and is not the exception. Sam is the customer.
 
-**Account summary.** The balance is the single focal point of the screen. One clear number, generous space around it. Offer the thirty day activity as a chart the user can choose to open, not something that competes on arrival. The chart updates when the user asks it to, never on its own.
+Design for calm. Calm means the screen tells Sam what they need to know before they have to ask. Calm means nothing moves that Sam did not ask to move. Calm means Sam can get pulled away, come back five minutes later, and pick up where they were. Calm means when something goes wrong, the app says what happened and what to do next, in the same breath, in Sam's language.
 
-**Transactions.** The last twenty transactions. Each row carries merchant, date, amount, and status. Status is in text, with colour as reinforcement, never as the only signal. Rows are comfortable rather than compact. Every control is at least 24 by 24 CSS pixels, 44 by 44 preferred. Row actions are always present and reachable, not revealed on hover. Every control has a name that says what it does and which transaction it acts on.
+**Brand.** Our brand colour is a bright yellow, `#FFD400`. Use it where a person's eye needs to land: the primary action, the current selection, the confirmation moment. Not for text on white. Not as the only signal that a field is required. If yellow is the only thing carrying meaning, meaning is missing.
 
-**Move money.** One primary action, labelled in plain language. Advanced options such as wire or scheduled payment are revealed when the user needs them. When the form opens, move focus into it, keep focus inside it, close it on Escape, and return focus to the button that opened it. Required fields are marked in text, not by colour alone.
+**Account summary.** Balance at the top. One number, generous space, the largest thing on the screen. Show the currently available balance and the pending amount separately, in plain words, so Sam does not have to do maths to know what they can spend. The thirty day activity chart is a secondary view Sam can open, not something that greets them. When the chart is open it responds to Sam, it does not animate on its own.
 
-**Failure case.** If the payment cannot be processed, say so in plain language, explain what to do next, and announce it to assistive technology. Do not say "Payment Failed".
+**Transactions.** The last twenty transactions, one per row. Merchant, date, amount, status. Status is a word first and a colour second. Posted, Pending, Declined. Rows are comfortable to tap with a thumb and comfortable to read at arm's length. Every control has a name that describes the action and the transaction, so Sam's screen reader says "Repeat payment to Thames Water on 8 September" not "button". Row actions are always visible. Hover is not a feature we can rely on.
 
-**Timing.** If a session must expire, warn well before, allow the user to extend it, and never lose what the user typed.
+**Move money.** One primary yellow button, labelled in plain language. When the form opens, focus moves into it, stays inside it, and returns to the trigger when Sam closes it or presses Escape. Every field has a persistent visible label above the input. Required is a word, not a colour. If Sam submits with something missing, the top of the form summarises what is missing and links to each field. Sam's typed values are preserved through every state change.
 
-**General.** Focus must always be clearly visible. Reduced motion is a primary experience, not a fallback. Follow the accessibility rules in the project.
+**Failure case.** If a payment cannot go through, use the `recommended_message` from `failure-states.json` for that state. When Sam tries to send more than their available balance to Landlord Ltd, the message says exactly how much they can send and offers to adjust the amount, not "Payment Failed". The message is announced to assistive technology at the moment it appears, not only shown. Every failure carries a primary and secondary action that match the recommended actions in the data.
 
-Use the data in the JSON files in project knowledge. Use the plain language strings file for any customer-facing text.
+**Session.** Follow the `fail_session_expiring` behaviour in `failure-states.json`. Warn Sam one minute before sign-out, tell them their typed values are safe, and offer to stay signed in. Never silently log Sam out mid-transaction.
+
+**Motion.** Reduced motion is the default experience for Sam, because Sam's profile says so. Motion is an opt-in flourish, not a baseline. Focus indicators are visible everywhere focus can land, at the moment focus arrives.
+
+Follow the accessibility rules in the project. Use the data in the JSON files in project knowledge. Take every customer-facing sentence from `failure-states.json` where one exists, and match its tone everywhere else.
