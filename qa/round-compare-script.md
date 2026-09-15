@@ -2,13 +2,13 @@
 
 Run this against your Round 1 build, then your Round 2 build. Score each check pass or fail. Do not fix as you go. Note it and move on. The delta between the two rounds is the point.
 
-Seven of these ten are not fully machine detectable. Three are. That gap is the reason a human still runs QA.
+Eight of these ten need a human. Two are machine detectable. That gap is the reason a human still runs QA.
 
 ## The ten checks
 
-1. **Accessible names.** Tab to every icon-only button and row action. The screen reader announcement (or the accessible name in the inspector) says what the control does and what it acts on, not "button". Human.
-2. **Visible focus.** Tab through the whole page. Every focusable element shows a clear focus style. Focus never disappears. Machine partial, human confirms.
-3. **Keyboard reachable.** Complete a Move money without touching the mouse. Every interactive element is reachable and operable from the keyboard alone. Human.
+1. **Keyboard tour.** Tab from the top of the page to the bottom. You can reach every control, focus never disappears, focus is always visible, and the tab order matches what you see on screen. Human.
+2. **Icons have words.** Look at every icon-only button and row action without hovering. You can tell what each one does from what is on screen. If you cannot tell a repeat from a flag from a details button, the label is missing. Human.
+3. **Task without a mouse.** Complete a Move money end to end without touching the mouse. Open the modal, fill the fields, submit, close. Human.
 4. **Colour is never the only signal.** Set the OS to grayscale, or a colourblindness simulator to Deuteranopia. Posted, Pending and Declined are still readable. Required is a word, not a colour. Human.
 5. **4.5:1 text contrast.** Body text meets 4.5:1 against its background. Large text and UI components meet 3:1. Machine.
 6. **24 by 24 touch targets.** Row actions and small controls measure at least 24 by 24 CSS pixels. Note anything under 44 by 44. Machine.
