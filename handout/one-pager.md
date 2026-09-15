@@ -12,8 +12,9 @@
 
 - Round brief: one of `round-1-brief.md` or `round-2-brief.md`
 - Data: `data/account.json`, `data/transactions.json`, `data/payees.json`, `data/failure-states.json`
-- Copy: `copy/plain-language-strings.md`
 - QA script: `qa/round-compare-script.md`
+
+The Round 2 brief points at `data/failure-states.json` for customer-facing copy. No separate copy sheet to paste.
 
 ## Builders (free tier, no card)
 
@@ -31,11 +32,10 @@
 
 ## Round 2 rules
 
-1. Install ACCESSIBILITY-CORE.md from the toolkit into project knowledge
+1. Install `ACCESSIBILITY-CORE.md` from the toolkit into project knowledge
 2. Start a fresh project
 3. Paste `round-2-brief.md`
-4. Paste `plain-language-strings.md` into project knowledge
-5. Run the same QA script. Note the delta.
+4. Run the same QA script. Note the delta.
 
 ## The point
 

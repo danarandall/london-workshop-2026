@@ -11,10 +11,11 @@ Nothing here is a real person, real account, or real money.
 - `data/account.json` — One customer, one current account, one savings pot.
 - `data/transactions.json` — Twenty transactions across two weeks.
 - `data/payees.json` — Six saved payees.
-- `data/failure-states.json` — Four failure states the app must handle.
-- `copy/plain-language-strings.md` — The exact words to use, and the words to avoid.
+- `data/failure-states.json` — Four failure states the app must handle. The Round 2 brief points here for customer-facing copy.
 - `qa/round-compare-script.md` — The ten checks we run at the end of each round.
 - `handout/one-pager.md` — Printable single sheet for the room.
+- `handout/QA-Scorecard.pdf` — Print the scorecard for the room.
+- `copy/plain-language-strings.md` — Older copy sheet. Still here for reference; not required by the current briefs.
 
 ## Companion toolkit
 

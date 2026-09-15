@@ -1,22 +1,26 @@
 # Round Compare — Ten Checks
 
-Run this against the Round 1 build, then the Round 2 build. Score each check pass or fail. Do not fix as you go; note it and move on.
+Run this against your Round 1 build, then your Round 2 build. Score each check pass or fail. Do not fix as you go. Note it and move on. The delta between the two rounds is the point.
 
-1. **Focus is visible.** Tab through the whole page. Every focusable element shows a clear focus style. Fail if any focus disappears.
-2. **Keyboard only.** Complete a Send Money without touching the mouse. Fail if any step requires a click.
-3. **Escape closes the form.** Open Send Money, press Escape. Fail if the form stays open or focus does not return to the button that opened it.
-4. **Automated scan is clean.** Run the Level Access extension (Chrome Web Store) on the page. Fail if any Critical or Serious issues are flagged. The extension shows the count, the offending element, and the code snippet in the browser.
-5. **Status is in text.** Install a free colourblindness simulator (Colorblindly on Chrome/Edge, Let’s Get Color Blind on Firefox), set it to Deuteranopia, and read the transactions list. Fail if you cannot tell posted from declined.
-6. **Required fields marked in text.** Look at the Send Money form. Fail if required is signalled only by an asterisk in a coloured label.
-7. **Failure has plain language and a next step.** Trigger insufficient funds. Fail if you see "Payment Failed", "Error", or a message with no action.
-8. **Balance is the focal point.** Squint at the dashboard. Fail if the balance is not the first thing you see.
-9. **Motion is opt-in.** Load the page. Fail if anything moves, refreshes, or animates on its own before the user asks.
-10. **Touch targets.** Measure any row action. Fail if under 24 by 24 CSS pixels. Note if under 44 by 44.
+Seven of these ten are not fully machine detectable. Three are. That gap is the reason a human still runs QA.
+
+## The ten checks
+
+1. **Accessible names.** Tab to every icon-only button and row action. The screen reader announcement (or the accessible name in the inspector) says what the control does and what it acts on, not "button". Human.
+2. **Visible focus.** Tab through the whole page. Every focusable element shows a clear focus style. Focus never disappears. Machine partial, human confirms.
+3. **Keyboard reachable.** Complete a Move money without touching the mouse. Every interactive element is reachable and operable from the keyboard alone. Human.
+4. **Colour is never the only signal.** Set the OS to grayscale, or a colourblindness simulator to Deuteranopia. Posted, Pending and Declined are still readable. Required is a word, not a colour. Human.
+5. **4.5:1 text contrast.** Body text meets 4.5:1 against its background. Large text and UI components meet 3:1. Machine.
+6. **24 by 24 touch targets.** Row actions and small controls measure at least 24 by 24 CSS pixels. Note anything under 44 by 44. Machine.
+7. **Focus trapped and returned.** Open the Move money modal. Focus moves into it, stays inside it, and returns to the trigger on close or Escape. Human.
+8. **Motion respects reduced-motion.** Load the page with reduced motion on. Nothing moves, refreshes, or animates before the user asks for it. Human.
+9. **Plain-language errors that tell you what to do.** Trigger insufficient funds. The message names what happened and what to do next, in the same breath. No "Payment Failed". No "Error" with no action. Human.
+10. **Session that warns before it ends.** Idle for the timeout. The app warns before signing you out, tells you your typed values are safe, and offers to stay signed in. Never silently logs you out mid-transaction. Human.
 
 ## Scoring
 
-Round 1 score: __ / 10  
-Round 2 score: __ / 10  
-Delta: __
+Round 1 score: __ / 10
+Round 2 score: __ / 10
+Delta: +__
 
-The delta is the point of the workshop. Not the absolute number.
+The delta is the point. Not the absolute number. The gap is what a rules file plus a plain-language brief buys you, without writing a line of code.
